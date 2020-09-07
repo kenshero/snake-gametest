@@ -72,12 +72,12 @@ function update() {
   } else if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
     if (PRESS_KEY != DOWN_KEY) {
       PRESS_KEY = UP_KEY
-        //   for (let i = 0; i < heros.children.length; i++) {
-        //     if (i === 0) {
-        //       continue
-        //     }
-        //     game.physics.arcade.moveToXY(heros.children[i], positionCurve.x, positionCurve.y, velocitySpeed, 1000);
-        //   }
+      for (let i = 0; i < heros.children.length; i++) {
+        if (i === 0) {
+          continue
+        }
+        game.physics.arcade.moveToXY(heros.children[i], positionCurve.x, positionCurve.y, velocitySpeed, 1000);
+      }
     } else if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
       if (PRESS_KEY != UP_KEY) {
         PRESS_KEY = DOWN_KEY

@@ -171,7 +171,7 @@ function create() {
     },
 
     grow: function() {
-      let newPart = this.heros.create(this.tail.x + 15, this.tail.y + 15, 'hero2');
+      let newPart = this.heros.create(this.tail.x, this.tail.y, 'hero2');
       newPart.setOrigin(0);
     },
 

@@ -173,7 +173,7 @@ function SpawnChess() {
     return
   }
 
-  const typeChess = Math.floor(Math.random() * 2)
+  const typeChess = Math.floor(Math.random() * 1) // 2 for hero
   if (typeChess === 0) {
     randomSpawnEnemy(row, col)
   } else if (typeChess === 1) {
@@ -200,14 +200,13 @@ function ColliderHeading(row, col) {
       heros.remove(heros.children[0], true)
     }
   } else if (gridPos[headingPos.row][headingPos.col].chessType == "ronin") {
-    var ronin = gridPos[headingPos.row][headingPos.col].obj
-    ronins.remove(ronin, true)
-    console.log(ronins)
-    var hero = heros.create(82, 82, ronin.key)
-    hero.width = 30
-    hero.height = 30
-    hero.name = "hero"
-      // hero.number = herosCount
+    // var ronin = gridPos[headingPos.row][headingPos.col].obj
+    // ronins.remove(ronin, true)
+    // var hero = heros.create(82, 82, ronin.key)
+    // hero.width = 30
+    // hero.height = 30
+    // hero.name = "hero"
+    // hero.number = herosCount
   }
 
   if (heros.children.length == 0) {
